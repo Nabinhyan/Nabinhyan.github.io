@@ -10141,10 +10141,120 @@ section.resume-section .resume-section-content {
                 background: #fafafa;
             }
             .contact-us textarea {
-                min-height: 188px;
+                min-height: 150px;
                 max-width: 100%;
             }
             .contact-us .map {
                 overflow: hidden;
                 border-radius: 4px;
             }
+
+
+
+.active1{
+      font-size: 0;
+      width: 50px;
+      height: 50px;
+      border-left-color: transparent;
+      animation: rotate 1.4s ease 0.5s infinite;  
+    }
+    @keyframes rotate{
+      0%{
+        transform: rotate(360deg);
+      }
+    }
+
+    .success{
+      position: relative;
+      background-color: #fff;
+      animation: bounce .3% ease-in;
+    }
+
+    @keyframes bounce{
+      0%{
+        transform: scale(0.9);
+      }
+    }
+    .success:before{
+      content: '';
+      position: absolute;
+      background: url(check-solid.svg) no-repeat;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 31px;
+      height: 31px;
+      line-height: 31px;
+      top: 8px;
+    }
+
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #09a307;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 90%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#errorsnackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 90%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#errorsnackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.asterisc {
+  display: block;
+  color: red;
+  margin: -30px 180px;
+}
